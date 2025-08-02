@@ -1,38 +1,126 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  padding: 6px 12px;
+  background-color: #e5e7eb;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #111827;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input,
+select {
+  padding: 10px;
+  margin: 8px 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+select {
+  width: 270px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 6px;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+.chat-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 30px;
+
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-message {
+  margin-bottom: 12px;
+  padding: 10px;
+  background-color: #e0f2fe;
+  border-left: 4px solid #0284c7;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.message.sent {
+  align-self: flex-end;
+  background-color: #dbeafe; /* Light blue */
+  border-left: 4px solid #3b82f6;
+  text-align: right;
+}
+
+.message.received {
+  align-self: flex-start;
+  background-color: #f3f4f6; /* Light gray */
+  border-left: 4px solid #9ca3af;
+}
+
+.meta {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+.text {
+  font-size: 1rem;
+  color: #111827;
 }
